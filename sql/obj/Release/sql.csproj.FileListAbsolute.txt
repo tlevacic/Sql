@@ -1,0 +1,10 @@
+C:\Users\tleva\source\repos\sql\sql\bin\Release\sql.exe.config
+C:\Users\tleva\source\repos\sql\sql\bin\Release\sql.exe
+C:\Users\tleva\source\repos\sql\sql\bin\Release\sql.pdb
+C:\Users\tleva\source\repos\sql\sql\obj\Release\sql.Form1.resources
+C:\Users\tleva\source\repos\sql\sql\obj\Release\sql.Form2.resources
+C:\Users\tleva\source\repos\sql\sql\obj\Release\sql.Properties.Resources.resources
+C:\Users\tleva\source\repos\sql\sql\obj\Release\sql.csproj.GenerateResource.cache
+C:\Users\tleva\source\repos\sql\sql\obj\Release\sql.exe
+C:\Users\tleva\source\repos\sql\sql\obj\Release\sql.pdb
+C:\Users\tleva\source\repos\sql\sql\obj\Release\sql.csprojAssemblyReference.cache

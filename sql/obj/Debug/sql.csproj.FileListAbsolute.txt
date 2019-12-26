@@ -7,3 +7,4 @@ C:\Users\tleva\source\repos\sql\sql\obj\Debug\sql.Properties.Resources.resources
 C:\Users\tleva\source\repos\sql\sql\obj\Debug\sql.csproj.GenerateResource.cache
 C:\Users\tleva\source\repos\sql\sql\obj\Debug\sql.exe
 C:\Users\tleva\source\repos\sql\sql\obj\Debug\sql.pdb
+C:\Users\tleva\source\repos\sql\sql\obj\Debug\sql.Form2.resources

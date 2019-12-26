@@ -26,12 +26,16 @@ namespace sql
         {
 
         }
-
         private void button2_Click(object sender, EventArgs e)
         {
             Form2 f2 = new Form2();
             this.Hide();
             f2.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
