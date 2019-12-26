@@ -116,13 +116,14 @@
             this.connectionBtn.TabIndex = 2;
             this.connectionBtn.Text = "Connect";
             this.connectionBtn.UseVisualStyleBackColor = true;
+            this.connectionBtn.Click += new System.EventHandler(this.connectionBtn_Click);
             // 
             // connectionInfo
             // 
             this.connectionInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
             this.connectionInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.connectionInfo.Font = new System.Drawing.Font("FontAwesome", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.connectionInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(197)))), ((int)(((byte)(199)))));
+            this.connectionInfo.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.connectionInfo.ForeColor = System.Drawing.Color.Red;
             this.connectionInfo.Location = new System.Drawing.Point(16, 54);
             this.connectionInfo.Name = "connectionInfo";
             this.connectionInfo.ReadOnly = true;

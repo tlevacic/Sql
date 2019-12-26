@@ -12,27 +12,44 @@ namespace sql
 {
     public partial class Form1 : Form
     {
+        String email = "tin@gmail.com";
+        String password = "password";
+        private bool haveAccess()
+        {
+            if (emailText.Text.Equals(email) && passwordText.Text.Equals(password))
+                return true;
+            return false;
+        }
         public Form1()
         {
             InitializeComponent();
         }
-
+        //NEED TO DELETE
         private void button1_Click(object sender, EventArgs e)
         {
             Close();
         }
-
+        //NEED TO DELETE
         private void label3_Click(object sender, EventArgs e)
         {
 
         }
+        //Go to next form
         private void button2_Click(object sender, EventArgs e)
         {
-            Form2 f2 = new Form2();
-            this.Hide();
-            f2.ShowDialog();
+            if (haveAccess())
+            {
+                Form2 f2 = new Form2();
+                this.Hide();
+                f2.ShowDialog();
+            }
+            else
+                MessageBox.Show("Wrong Credentials!");
+                
+
         }
 
+        //Close form1
         private void button3_Click(object sender, EventArgs e)
         {
             Close();

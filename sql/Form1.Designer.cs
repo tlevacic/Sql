@@ -32,14 +32,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.passwordText = new System.Windows.Forms.RichTextBox();
+            this.emailText = new System.Windows.Forms.RichTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -84,8 +84,8 @@
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.richTextBox2);
-            this.panel2.Controls.Add(this.richTextBox1);
+            this.panel2.Controls.Add(this.passwordText);
+            this.panel2.Controls.Add(this.emailText);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
@@ -94,6 +94,20 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(359, 542);
             this.panel2.TabIndex = 1;
+            // 
+            // button3
+            // 
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(197)))), ((int)(((byte)(199)))));
+            this.button3.Location = new System.Drawing.Point(302, 3);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(54, 43);
+            this.button3.TabIndex = 7;
+            this.button3.Text = "x";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -123,23 +137,23 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // richTextBox2
+            // passwordText
             // 
-            this.richTextBox2.BackColor = System.Drawing.SystemColors.Control;
-            this.richTextBox2.Location = new System.Drawing.Point(11, 242);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(287, 25);
-            this.richTextBox2.TabIndex = 4;
-            this.richTextBox2.Text = "";
+            this.passwordText.BackColor = System.Drawing.SystemColors.Control;
+            this.passwordText.Location = new System.Drawing.Point(11, 242);
+            this.passwordText.Name = "passwordText";
+            this.passwordText.Size = new System.Drawing.Size(287, 25);
+            this.passwordText.TabIndex = 4;
+            this.passwordText.Text = "";
             // 
-            // richTextBox1
+            // emailText
             // 
-            this.richTextBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.richTextBox1.Location = new System.Drawing.Point(11, 168);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(287, 25);
-            this.richTextBox1.TabIndex = 3;
-            this.richTextBox1.Text = "";
+            this.emailText.BackColor = System.Drawing.SystemColors.Control;
+            this.emailText.Location = new System.Drawing.Point(11, 168);
+            this.emailText.Name = "emailText";
+            this.emailText.Size = new System.Drawing.Size(287, 25);
+            this.emailText.TabIndex = 3;
+            this.emailText.Text = "";
             // 
             // label4
             // 
@@ -175,20 +189,6 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Sign In";
             // 
-            // button3
-            // 
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(197)))), ((int)(((byte)(199)))));
-            this.button3.Location = new System.Drawing.Point(302, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(54, 43);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "x";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -215,8 +215,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox passwordText;
+        private System.Windows.Forms.RichTextBox emailText;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
