@@ -1,0 +1,9 @@
+C:\Users\tleva\source\repos\sql\sql\bin\Debug\sql.exe.config
+C:\Users\tleva\source\repos\sql\sql\bin\Debug\sql.exe
+C:\Users\tleva\source\repos\sql\sql\bin\Debug\sql.pdb
+C:\Users\tleva\source\repos\sql\sql\obj\Debug\sql.csprojAssemblyReference.cache
+C:\Users\tleva\source\repos\sql\sql\obj\Debug\sql.Form1.resources
+C:\Users\tleva\source\repos\sql\sql\obj\Debug\sql.Properties.Resources.resources
+C:\Users\tleva\source\repos\sql\sql\obj\Debug\sql.csproj.GenerateResource.cache
+C:\Users\tleva\source\repos\sql\sql\obj\Debug\sql.exe
+C:\Users\tleva\source\repos\sql\sql\obj\Debug\sql.pdb
