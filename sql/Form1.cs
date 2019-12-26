@@ -20,6 +20,8 @@ namespace sql
                 return true;
             return false;
         }
+
+
         public Form1()
         {
             InitializeComponent();

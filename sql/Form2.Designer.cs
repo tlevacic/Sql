@@ -69,6 +69,7 @@
             this.execute.TabIndex = 6;
             this.execute.Text = "Execute";
             this.execute.UseVisualStyleBackColor = true;
+            this.execute.Click += new System.EventHandler(this.execute_Click);
             // 
             // label2
             // 
