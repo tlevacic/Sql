@@ -26,7 +26,7 @@ namespace sql
             
             cnn = new SqlConnection(connectionString);
         }
-        private void sqlInsert (string query)
+        private bool sqlInsert (string query)
         {
             try
             {
@@ -35,10 +35,29 @@ namespace sql
                 cmd = new SqlCommand(query, cnn);
                 adapter.InsertCommand = new SqlCommand(query, cnn);
                 adapter.InsertCommand.ExecuteNonQuery();
+                return true;
             }
             catch(SqlException)
             {
                 MessageBox.Show("Insert not completed. Please try again.");
+                return false;
+            }
+        }
+        private bool sqlUpdate(string query)
+        {
+            try
+            {
+                SqlCommand cmd;
+                SqlDataAdapter adapter = new SqlDataAdapter();
+                cmd = new SqlCommand(query, cnn);
+                adapter.UpdateCommand = new SqlCommand(query, cnn);
+                adapter.UpdateCommand.ExecuteNonQuery();
+                return true;
+            }
+            catch (SqlException)
+            {
+                MessageBox.Show("Update not completed. Please try again.");
+                return false;
             }
         }
         private string sqlSelect( string query)
@@ -100,8 +119,12 @@ namespace sql
                     displayBox.Text = sqlSelect(textQuery.Text);
                     break;
                 case "Insert":
-                    sqlInsert(textQuery.Text);
+                    if(sqlInsert(textQuery.Text))
                     displayBox.Text = "Insert completed sucessfuly";
+                    break;
+                case "Update":
+                    if(sqlUpdate(textQuery.Text))
+                    displayBox.Text = "Update completed sucessfuly";
                     break;
                 default:
                     MessageBox.Show("Invalid Query");
