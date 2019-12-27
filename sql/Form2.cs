@@ -60,6 +60,23 @@ namespace sql
                 return false;
             }
         }
+        private bool sqlDelete(string query)
+        {
+            try
+            {
+                SqlCommand cmd;
+                SqlDataAdapter adapter = new SqlDataAdapter();
+                cmd = new SqlCommand(query, cnn);
+                adapter.DeleteCommand = new SqlCommand(query, cnn);
+                adapter.DeleteCommand.ExecuteNonQuery();
+                return true;
+            }
+            catch (SqlException)
+            {
+                MessageBox.Show("Update not completed. Please try again.");
+                return false;
+            }
+        }
         private string sqlSelect( string query)
         {
             string outputString = "";
@@ -125,6 +142,10 @@ namespace sql
                 case "Update":
                     if(sqlUpdate(textQuery.Text))
                     displayBox.Text = "Update completed sucessfuly";
+                    break;
+                case "Delete":
+                    if (sqlUpdate(textQuery.Text))
+                        displayBox.Text = "Delete completed sucessfuly";
                     break;
                 default:
                     MessageBox.Show("Invalid Query");
