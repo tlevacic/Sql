@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+//TODO 1: add one line input (email and pass)
+//TODO 2: password input validate
+//TODO 3: modify text in inputs
 namespace sql
 {
     public partial class Form1 : Form
