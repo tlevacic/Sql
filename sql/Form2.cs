@@ -19,11 +19,27 @@ namespace sql
                 "Integrated Security=SSPI;";
         SqlConnection cnn = new SqlConnection();
 
+
         public Form2()
         {
             InitializeComponent();
             
             cnn = new SqlConnection(connectionString);
+        }
+        private void sqlInsert (string query)
+        {
+            try
+            {
+                SqlCommand cmd;
+                SqlDataAdapter adapter = new SqlDataAdapter();
+                cmd = new SqlCommand(query, cnn);
+                adapter.InsertCommand = new SqlCommand(query, cnn);
+                adapter.InsertCommand.ExecuteNonQuery();
+            }
+            catch(SqlException)
+            {
+                MessageBox.Show("Insert not completed. Please try again.");
+            }
         }
         private string sqlSelect( string query)
         {
@@ -40,7 +56,7 @@ namespace sql
                             {
                                 for (int i = 0; i < reader.FieldCount; i++)
                                 {
-                                    outputString = outputString + reader[i] + "\n";
+                                    outputString = outputString + reader[i] + "\t";
                                 }
 
                             }
@@ -78,7 +94,20 @@ namespace sql
 
         private void execute_Click(object sender, EventArgs e)
         {
-            displayBox.Text = sqlSelect(textQuery.Text);
+            switch (textQuery.Text.Split(' ')[0])
+            {
+                case "Select":
+                    displayBox.Text = sqlSelect(textQuery.Text);
+                    break;
+                case "Insert":
+                    sqlInsert(textQuery.Text);
+                    displayBox.Text = "Insert completed sucessfuly";
+                    break;
+                default:
+                    MessageBox.Show("Invalid Query");
+                    break;
+            }
+            
 
         }
     }
