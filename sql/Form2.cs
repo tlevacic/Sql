@@ -8,6 +8,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+//TODO add fn to validate between Select and select
+// TODO exception handler on connection
+// TODO add new form for display whole table
+//TODO modify database with a lot more data
+// modify UI
 
 namespace sql
 {
@@ -73,7 +78,7 @@ namespace sql
             }
             catch (SqlException)
             {
-                MessageBox.Show("Update not completed. Please try again.");
+                MessageBox.Show("Delete not completed. Please try again.");
                 return false;
             }
         }
