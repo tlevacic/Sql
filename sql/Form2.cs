@@ -140,6 +140,10 @@ namespace sql
             }
             catch(System.InvalidOperationException)
             {
+                MessageBox.Show("Something gone wrong");
+            }
+            catch(System.ArgumentException)
+            {
                 MessageBox.Show("Wrong connection string!");
             }
         }
