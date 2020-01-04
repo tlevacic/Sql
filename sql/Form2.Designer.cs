@@ -103,7 +103,7 @@
             // 
             this.displayBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(239)))), ((int)(((byte)(230)))));
             this.displayBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.displayBox.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.displayBox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.displayBox.Location = new System.Drawing.Point(181, 380);
             this.displayBox.Name = "displayBox";
             this.displayBox.ReadOnly = true;
