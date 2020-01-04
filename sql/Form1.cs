@@ -63,32 +63,5 @@ namespace sql
         {
             Close();
         }
-
-
-
-
-
-
-
-        /*------------------------------------
-        Unused methods
-        Needs to be deleted.
-             
-        ---------------------------------------*/
-        //NEED TO DELETE
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-        //NEED TO DELETE
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-        //NEED TO DELETE
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            
-        }
     }
 }

@@ -135,6 +135,7 @@
             this.setConnBtn.TabIndex = 3;
             this.setConnBtn.Text = "Set database connection";
             this.setConnBtn.UseVisualStyleBackColor = false;
+            this.setConnBtn.Click += new System.EventHandler(this.setConnBtn_Click_1);
             // 
             // connectionBtn
             // 
