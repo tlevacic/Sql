@@ -32,12 +32,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.inputPass = new System.Windows.Forms.TextBox();
+            this.inputEmail = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.inputEmail = new System.Windows.Forms.TextBox();
-            this.inputPass = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -91,6 +91,23 @@
             this.panel2.Size = new System.Drawing.Size(495, 542);
             this.panel2.TabIndex = 1;
             // 
+            // inputPass
+            // 
+            this.inputPass.Font = new System.Drawing.Font("FontAwesome", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputPass.Location = new System.Drawing.Point(26, 255);
+            this.inputPass.Name = "inputPass";
+            this.inputPass.Size = new System.Drawing.Size(287, 24);
+            this.inputPass.TabIndex = 8;
+            this.inputPass.UseSystemPasswordChar = true;
+            // 
+            // inputEmail
+            // 
+            this.inputEmail.Font = new System.Drawing.Font("FontAwesome", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputEmail.Location = new System.Drawing.Point(26, 172);
+            this.inputEmail.Name = "inputEmail";
+            this.inputEmail.Size = new System.Drawing.Size(287, 24);
+            this.inputEmail.TabIndex = 7;
+            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(197)))), ((int)(((byte)(199)))));
@@ -139,22 +156,6 @@
             this.label2.Size = new System.Drawing.Size(88, 27);
             this.label2.TabIndex = 0;
             this.label2.Text = "Sign In";
-            // 
-            // inputEmail
-            // 
-            this.inputEmail.Font = new System.Drawing.Font("FontAwesome", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inputEmail.Location = new System.Drawing.Point(26, 172);
-            this.inputEmail.Name = "inputEmail";
-            this.inputEmail.Size = new System.Drawing.Size(287, 24);
-            this.inputEmail.TabIndex = 7;
-            // 
-            // inputPass
-            // 
-            this.inputPass.Font = new System.Drawing.Font("FontAwesome", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inputPass.Location = new System.Drawing.Point(26, 255);
-            this.inputPass.Name = "inputPass";
-            this.inputPass.Size = new System.Drawing.Size(287, 24);
-            this.inputPass.TabIndex = 8;
             // 
             // Form1
             // 

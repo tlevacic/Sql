@@ -29,10 +29,12 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.clearBtn = new System.Windows.Forms.Button();
             this.execute = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.displayBox = new System.Windows.Forms.RichTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.connectionBtn = new System.Windows.Forms.Button();
             this.connectionInfo = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -45,16 +47,33 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.clearBtn);
             this.panel2.Controls.Add(this.execute);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.displayBox);
             this.panel2.Controls.Add(this.panel1);
             this.panel2.Controls.Add(this.textQuery);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(894, 503);
             this.panel2.TabIndex = 1;
+            // 
+            // clearBtn
+            // 
+            this.clearBtn.FlatAppearance.BorderSize = 0;
+            this.clearBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clearBtn.Font = new System.Drawing.Font("FontAwesome", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clearBtn.ForeColor = System.Drawing.Color.White;
+            this.clearBtn.Location = new System.Drawing.Point(185, 328);
+            this.clearBtn.Name = "clearBtn";
+            this.clearBtn.Size = new System.Drawing.Size(75, 23);
+            this.clearBtn.TabIndex = 7;
+            this.clearBtn.Text = "Clear";
+            this.clearBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.clearBtn.UseVisualStyleBackColor = true;
+            this.clearBtn.Click += new System.EventHandler(this.clearBtn_Click);
             // 
             // execute
             // 
@@ -84,7 +103,7 @@
             // 
             this.displayBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(239)))), ((int)(((byte)(230)))));
             this.displayBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.displayBox.Font = new System.Drawing.Font("FontAwesome", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.displayBox.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.displayBox.Location = new System.Drawing.Point(181, 380);
             this.displayBox.Name = "displayBox";
             this.displayBox.ReadOnly = true;
@@ -95,6 +114,7 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.connectionBtn);
             this.panel1.Controls.Add(this.connectionInfo);
             this.panel1.Controls.Add(this.label1);
@@ -102,6 +122,20 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(175, 501);
             this.panel1.TabIndex = 3;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("FontAwesome", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(16, 335);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(146, 36);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Set database connection";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // connectionBtn
             // 
@@ -180,5 +214,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.RichTextBox displayBox;
         private System.Windows.Forms.Button execute;
+        private System.Windows.Forms.Button clearBtn;
+        private System.Windows.Forms.Button button1;
     }
 }

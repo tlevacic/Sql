@@ -8,29 +8,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//TODO add fn to validate between Select and select
-// TODO exception handler on connection
-// TODO add new form for display whole table
-//TODO modify database with a lot more data
-// modify UI
 
 namespace sql
 {
     public partial class Form2 : Form
     {
-        private String connectionString =
-                "Data Source=DESKTOP-J8PKM7S\\MYDATABASE;" +
-                "Initial Catalog=csharp;" +
-                "Integrated Security=SSPI;";
+        public String connectionString;
         SqlConnection cnn = new SqlConnection();
 
-
+        //Constructor
         public Form2()
         {
             InitializeComponent();
-            
-            cnn = new SqlConnection(connectionString);
+
+
         }
+
+        //Insert query
         private bool sqlInsert (string query)
         {
             try
@@ -48,6 +42,8 @@ namespace sql
                 return false;
             }
         }
+
+        //Update query
         private bool sqlUpdate(string query)
         {
             try
@@ -65,6 +61,8 @@ namespace sql
                 return false;
             }
         }
+
+        //Delete query
         private bool sqlDelete(string query)
         {
             try
@@ -82,6 +80,8 @@ namespace sql
                 return false;
             }
         }
+
+        //Select query
         private string sqlSelect( string query)
         {
             string outputString = "";
@@ -97,8 +97,9 @@ namespace sql
                             {
                                 for (int i = 0; i < reader.FieldCount; i++)
                                 {
-                                    outputString = outputString + reader[i] + "\t";
+                                    outputString = outputString + reader[i] + "   ";
                                 }
+                                outputString += "\n";
 
                             }
                         }
@@ -113,42 +114,53 @@ namespace sql
             }
             return outputString;
         }
+
         //Close form2
         private void closeBtn_Click(object sender, EventArgs e)
         {
             Close();    
         }
+
         //Connection access
         private void connectionBtn_Click(object sender, EventArgs e)
         {
+
             try
             {
-                cnn.Open();
-                connectionInfo.Text = "You Are Connected";
-                connectionInfo.ForeColor = Color.FromArgb(92, 230, 71);
+                if (cnn != null && cnn.State == ConnectionState.Closed)
+                {
+                    cnn = new SqlConnection(connectionString);
+                    cnn.Open();
+                    button1.Visible = false;
+                    button1.BackColor = Color.FromArgb(37, 37, 37);                   
+                    connectionInfo.Text = "You Are Connected";
+                    connectionBtn.Visible = false;
+                    connectionInfo.ForeColor = Color.FromArgb(92, 230, 71);
+                }
             }
-            catch(SqlException)
+            catch(System.InvalidOperationException)
             {
-                MessageBox.Show("Something gone wrong!");
+                MessageBox.Show("Wrong connection string!");
             }
         }
 
+        //Find out what query needs to be called
         private void execute_Click(object sender, EventArgs e)
         {
-            switch (textQuery.Text.Split(' ')[0])
+            switch (textQuery.Text.Split(' ')[0].ToLower())
             {
-                case "Select":
+                case "select":
                     displayBox.Text = sqlSelect(textQuery.Text);
                     break;
-                case "Insert":
+                case "insert":
                     if(sqlInsert(textQuery.Text))
                     displayBox.Text = "Insert completed sucessfuly";
                     break;
-                case "Update":
+                case "update":
                     if(sqlUpdate(textQuery.Text))
                     displayBox.Text = "Update completed sucessfuly";
                     break;
-                case "Delete":
+                case "delete":
                     if (sqlUpdate(textQuery.Text))
                         displayBox.Text = "Delete completed sucessfuly";
                     break;
@@ -158,6 +170,20 @@ namespace sql
             }
             
 
+        }
+
+        //Clear query input & query res
+        private void clearBtn_Click(object sender, EventArgs e)
+        {
+            textQuery.Text = "";
+            displayBox.Text = "";
+        }
+
+        //Set connection string
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form3 f3 = new Form3(this);
+            f3.ShowDialog();
         }
     }
 }

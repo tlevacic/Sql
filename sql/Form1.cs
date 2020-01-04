@@ -17,6 +17,7 @@ namespace sql
     {
         String email = "tin@gmail.com";
         String password = "password";
+
         private bool haveAccess()
         {
             if (inputEmail.Text.Equals(email) && inputPass.Text.Equals(password))
@@ -62,7 +63,7 @@ namespace sql
      
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
 }
