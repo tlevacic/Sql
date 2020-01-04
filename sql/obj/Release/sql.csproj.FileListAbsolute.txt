@@ -8,3 +8,4 @@ C:\Users\tleva\source\repos\sql\sql\obj\Release\sql.csproj.GenerateResource.cach
 C:\Users\tleva\source\repos\sql\sql\obj\Release\sql.exe
 C:\Users\tleva\source\repos\sql\sql\obj\Release\sql.pdb
 C:\Users\tleva\source\repos\sql\sql\obj\Release\sql.csprojAssemblyReference.cache
+C:\Users\tleva\source\repos\sql\sql\obj\Release\sql.csproj.CoreCompileInputs.cache

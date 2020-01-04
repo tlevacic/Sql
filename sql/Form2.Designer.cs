@@ -37,7 +37,6 @@
             this.connectionInfo = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textQuery = new System.Windows.Forms.RichTextBox();
-            this.closeBtn = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -51,11 +50,10 @@
             this.panel2.Controls.Add(this.displayBox);
             this.panel2.Controls.Add(this.panel1);
             this.panel2.Controls.Add(this.textQuery);
-            this.panel2.Controls.Add(this.closeBtn);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(662, 503);
+            this.panel2.Size = new System.Drawing.Size(894, 503);
             this.panel2.TabIndex = 1;
             // 
             // execute
@@ -63,7 +61,7 @@
             this.execute.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.execute.Font = new System.Drawing.Font("FontAwesome", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.execute.ForeColor = System.Drawing.Color.White;
-            this.execute.Location = new System.Drawing.Point(499, 328);
+            this.execute.Location = new System.Drawing.Point(732, 328);
             this.execute.Name = "execute";
             this.execute.Size = new System.Drawing.Size(149, 32);
             this.execute.TabIndex = 6;
@@ -90,7 +88,7 @@
             this.displayBox.Location = new System.Drawing.Point(181, 380);
             this.displayBox.Name = "displayBox";
             this.displayBox.ReadOnly = true;
-            this.displayBox.Size = new System.Drawing.Size(467, 110);
+            this.displayBox.Size = new System.Drawing.Size(700, 110);
             this.displayBox.TabIndex = 4;
             this.displayBox.Text = "";
             // 
@@ -100,7 +98,6 @@
             this.panel1.Controls.Add(this.connectionBtn);
             this.panel1.Controls.Add(this.connectionInfo);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(175, 501);
@@ -149,35 +146,22 @@
             this.textQuery.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textQuery.Font = new System.Drawing.Font("FontAwesome", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textQuery.ForeColor = System.Drawing.Color.White;
-            this.textQuery.Location = new System.Drawing.Point(180, 54);
+            this.textQuery.Location = new System.Drawing.Point(185, 54);
             this.textQuery.Name = "textQuery";
-            this.textQuery.Size = new System.Drawing.Size(469, 268);
+            this.textQuery.Size = new System.Drawing.Size(696, 268);
             this.textQuery.TabIndex = 2;
             this.textQuery.Text = "";
-            // 
-            // closeBtn
-            // 
-            this.closeBtn.FlatAppearance.BorderSize = 0;
-            this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.closeBtn.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closeBtn.ForeColor = System.Drawing.Color.White;
-            this.closeBtn.Location = new System.Drawing.Point(626, 3);
-            this.closeBtn.Name = "closeBtn";
-            this.closeBtn.Size = new System.Drawing.Size(33, 35);
-            this.closeBtn.TabIndex = 0;
-            this.closeBtn.Text = "x";
-            this.closeBtn.UseVisualStyleBackColor = true;
-            this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(662, 503);
+            this.ClientSize = new System.Drawing.Size(894, 503);
             this.Controls.Add(this.panel2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximizeBox = false;
             this.Name = "Form2";
-            this.Text = "Form2";
+            this.Text = "SQL Editor";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -188,7 +172,6 @@
 
         #endregion
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button closeBtn;
         private System.Windows.Forms.RichTextBox textQuery;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button connectionBtn;
