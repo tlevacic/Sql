@@ -34,7 +34,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.displayBox = new System.Windows.Forms.RichTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.setConnBtn = new System.Windows.Forms.Button();
             this.connectionBtn = new System.Windows.Forms.Button();
             this.connectionInfo = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -114,7 +114,7 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.setConnBtn);
             this.panel1.Controls.Add(this.connectionBtn);
             this.panel1.Controls.Add(this.connectionInfo);
             this.panel1.Controls.Add(this.label1);
@@ -123,19 +123,18 @@
             this.panel1.Size = new System.Drawing.Size(175, 501);
             this.panel1.TabIndex = 3;
             // 
-            // button1
+            // setConnBtn
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("FontAwesome", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(16, 335);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(146, 36);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Set database connection";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.setConnBtn.BackColor = System.Drawing.Color.White;
+            this.setConnBtn.FlatAppearance.BorderSize = 0;
+            this.setConnBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.setConnBtn.Font = new System.Drawing.Font("FontAwesome", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.setConnBtn.Location = new System.Drawing.Point(16, 335);
+            this.setConnBtn.Name = "setConnBtn";
+            this.setConnBtn.Size = new System.Drawing.Size(146, 36);
+            this.setConnBtn.TabIndex = 3;
+            this.setConnBtn.Text = "Set database connection";
+            this.setConnBtn.UseVisualStyleBackColor = false;
             // 
             // connectionBtn
             // 
@@ -216,6 +215,6 @@
         private System.Windows.Forms.RichTextBox displayBox;
         private System.Windows.Forms.Button execute;
         private System.Windows.Forms.Button clearBtn;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button setConnBtn;
     }
 }

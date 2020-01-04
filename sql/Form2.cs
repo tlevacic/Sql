@@ -131,8 +131,8 @@ namespace sql
                 {
                     cnn = new SqlConnection(connectionString);
                     cnn.Open();
-                    button1.Visible = false;
-                    button1.BackColor = Color.FromArgb(37, 37, 37);                   
+                    setConnBtn.Visible = false;
+                    setConnBtn.BackColor = Color.FromArgb(37, 37, 37);                   
                     connectionInfo.Text = "You Are Connected";
                     connectionBtn.Visible = false;
                     connectionInfo.ForeColor = Color.FromArgb(92, 230, 71);
@@ -184,7 +184,7 @@ namespace sql
         }
 
         //Set connection string
-        private void button1_Click(object sender, EventArgs e)
+        private void setConnBtn_Click(object sender, EventArgs e)
         {
             Form3 f3 = new Form3(this);
             f3.ShowDialog();

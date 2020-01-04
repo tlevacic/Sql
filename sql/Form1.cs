@@ -8,9 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-//TODO 1: add one line input (email and pass)
-//TODO 2: password input validate
-//TODO 3: modify text in inputs
+
 namespace sql
 {
     public partial class Form1 : Form
@@ -19,7 +17,7 @@ namespace sql
         //Map of valid users
         Dictionary<string, string> users = new Dictionary<string, string>();
 
-
+        //See if user is trying to access with good email/pass
         private bool haveAccess()
         {
             foreach (KeyValuePair<string, string> user in users)
@@ -30,28 +28,22 @@ namespace sql
             return false;
         }
 
+        //Adding users to map
         private void addUsers()
         {
             users.Add("tin@gmail.com", "password");
             users.Add("admin", "admin");
         }
-
+        
+        //Constructor
         public Form1()
         {
             InitializeComponent();
             addUsers();
         }
-        //NEED TO DELETE
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-        //NEED TO DELETE
-        private void label3_Click(object sender, EventArgs e)
-        {
 
-        }
-        //Go to next form
+
+        //Go to next form if user have good credentials
         private void button2_Click(object sender, EventArgs e)
         {
             if (haveAccess())
@@ -71,7 +63,29 @@ namespace sql
         {
             Close();
         }
-     
+
+
+
+
+
+
+
+        /*------------------------------------
+        Unused methods
+        Needs to be deleted.
+             
+        ---------------------------------------*/
+        //NEED TO DELETE
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+        //NEED TO DELETE
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+        //NEED TO DELETE
         private void Form1_Load(object sender, EventArgs e)
         {
             
