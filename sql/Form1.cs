@@ -19,7 +19,7 @@ namespace sql
         String password = "password";
         private bool haveAccess()
         {
-            if (emailText.Text.Equals(email) && passwordText.Text.Equals(password))
+            if (inputEmail.Text.Equals(email) && inputPass.Text.Equals(password))
                 return true;
             return false;
         }

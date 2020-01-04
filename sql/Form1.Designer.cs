@@ -33,11 +33,11 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
-            this.passwordText = new System.Windows.Forms.RichTextBox();
-            this.emailText = new System.Windows.Forms.RichTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.inputEmail = new System.Windows.Forms.TextBox();
+            this.inputPass = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -79,9 +79,9 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.panel2.Controls.Add(this.inputPass);
+            this.panel2.Controls.Add(this.inputEmail);
             this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.passwordText);
-            this.panel2.Controls.Add(this.emailText);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
@@ -98,31 +98,13 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("FontAwesome", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
-            this.button2.Location = new System.Drawing.Point(31, 467);
+            this.button2.Location = new System.Drawing.Point(26, 420);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(209, 27);
             this.button2.TabIndex = 6;
             this.button2.Text = "Check";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // passwordText
-            // 
-            this.passwordText.BackColor = System.Drawing.SystemColors.Control;
-            this.passwordText.Location = new System.Drawing.Point(31, 251);
-            this.passwordText.Name = "passwordText";
-            this.passwordText.Size = new System.Drawing.Size(287, 25);
-            this.passwordText.TabIndex = 4;
-            this.passwordText.Text = "";
-            // 
-            // emailText
-            // 
-            this.emailText.BackColor = System.Drawing.SystemColors.Control;
-            this.emailText.Location = new System.Drawing.Point(31, 171);
-            this.emailText.Name = "emailText";
-            this.emailText.Size = new System.Drawing.Size(287, 25);
-            this.emailText.TabIndex = 3;
-            this.emailText.Text = "";
             // 
             // label4
             // 
@@ -158,6 +140,22 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Sign In";
             // 
+            // inputEmail
+            // 
+            this.inputEmail.Font = new System.Drawing.Font("FontAwesome", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputEmail.Location = new System.Drawing.Point(26, 172);
+            this.inputEmail.Name = "inputEmail";
+            this.inputEmail.Size = new System.Drawing.Size(287, 24);
+            this.inputEmail.TabIndex = 7;
+            // 
+            // inputPass
+            // 
+            this.inputPass.Font = new System.Drawing.Font("FontAwesome", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputPass.Location = new System.Drawing.Point(26, 255);
+            this.inputPass.Name = "inputPass";
+            this.inputPass.Size = new System.Drawing.Size(287, 24);
+            this.inputPass.TabIndex = 8;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -186,12 +184,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.RichTextBox passwordText;
-        private System.Windows.Forms.RichTextBox emailText;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox inputPass;
+        private System.Windows.Forms.TextBox inputEmail;
     }
 }
 
