@@ -15,20 +15,31 @@ namespace sql
 {
     public partial class Form1 : Form
     {
-        String email = "tin@gmail.com";
-        String password = "password";
+
+        //Map of valid users
+        Dictionary<string, string> users = new Dictionary<string, string>();
+
 
         private bool haveAccess()
         {
-            if (inputEmail.Text.Equals(email) && inputPass.Text.Equals(password))
-                return true;
+            foreach (KeyValuePair<string, string> user in users)
+            {
+                if (inputEmail.Text.Equals(user.Key) && inputPass.Text.Equals(user.Value))
+                    return true;
+            }    
             return false;
         }
 
+        private void addUsers()
+        {
+            users.Add("tin@gmail.com", "password");
+            users.Add("admin", "admin");
+        }
 
         public Form1()
         {
             InitializeComponent();
+            addUsers();
         }
         //NEED TO DELETE
         private void button1_Click(object sender, EventArgs e)
