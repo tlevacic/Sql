@@ -20,7 +20,10 @@ namespace sql
         public Form2()
         {
             InitializeComponent();
+            this.Hide();
 
+            Form1 f1 = new Form1();
+            f1.ShowDialog();
 
         }
 
@@ -109,7 +112,7 @@ namespace sql
             }
             catch
             {
-                MessageBox.Show("Invalid SELECT or connection lost!");
+                MessageBox.Show("Invalid SELECT !");
 
             }
             return outputString;
@@ -118,7 +121,8 @@ namespace sql
         //Close form2
         private void closeBtn_Click(object sender, EventArgs e)
         {
-            Close();    
+            Close();
+            
         }
 
         //Connection access

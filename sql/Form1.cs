@@ -48,9 +48,7 @@ namespace sql
         {
             if (haveAccess())
             {
-                Form2 f2 = new Form2();
-                this.Hide();
-                f2.ShowDialog();
+                Close();
             }
             else
                 MessageBox.Show("Wrong Credentials!");
