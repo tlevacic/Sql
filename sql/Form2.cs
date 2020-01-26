@@ -20,11 +20,8 @@ namespace sql
         public Form2()
         {
             InitializeComponent();
-            this.Hide();
-
-            Form1 f1 = new Form1();
-            f1.ShowDialog();
         }
+    
 
         //Insert query
         private bool sqlInsert (string query)
@@ -121,7 +118,6 @@ namespace sql
         private void closeBtn_Click(object sender, EventArgs e)
         {
             Close();
-            
         }
 
         //Connection access

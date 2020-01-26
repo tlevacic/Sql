@@ -17,7 +17,6 @@ namespace sql
 
         //Map of valid users
         Dictionary<string, string> users = new Dictionary<string, string>();
-        public bool closed = false;
         //See if user is trying to access with good email/pass
         private bool haveAccess()
         {
@@ -49,16 +48,23 @@ namespace sql
         {
             if (haveAccess())
             {
-                Close();
+                Form2 main = new Form2();
+                main.Show();
+                main.FormClosed += new FormClosedEventHandler(main_FormClosed);
+                this.Hide();
             }
             else
                 MessageBox.Show("Wrong Credentials!");
         }
 
+        private void main_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Close();
+        }
+
         //Close form1
         private void button3_Click(object sender, EventArgs e)
         {
-            closed = true;
             Close();
         }
     }
