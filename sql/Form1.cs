@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Resources;
 
 
 namespace sql
@@ -16,7 +17,7 @@ namespace sql
 
         //Map of valid users
         Dictionary<string, string> users = new Dictionary<string, string>();
-
+        public bool closed = false;
         //See if user is trying to access with good email/pass
         private bool haveAccess()
         {
@@ -52,13 +53,12 @@ namespace sql
             }
             else
                 MessageBox.Show("Wrong Credentials!");
-                
-
         }
 
         //Close form1
         private void button3_Click(object sender, EventArgs e)
         {
+            closed = true;
             Close();
         }
     }

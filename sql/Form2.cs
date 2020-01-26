@@ -24,7 +24,6 @@ namespace sql
 
             Form1 f1 = new Form1();
             f1.ShowDialog();
-
         }
 
         //Insert query
