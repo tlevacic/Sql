@@ -28,9 +28,7 @@ namespace sql
         {
             try
             {
-                SqlCommand cmd;
                 SqlDataAdapter adapter = new SqlDataAdapter();
-                cmd = new SqlCommand(query, cnn);
                 adapter.InsertCommand = new SqlCommand(query, cnn);
                 adapter.InsertCommand.ExecuteNonQuery();
                 return true;
@@ -47,9 +45,7 @@ namespace sql
         {
             try
             {
-                SqlCommand cmd;
                 SqlDataAdapter adapter = new SqlDataAdapter();
-                cmd = new SqlCommand(query, cnn);
                 adapter.UpdateCommand = new SqlCommand(query, cnn);
                 adapter.UpdateCommand.ExecuteNonQuery();
                 return true;
@@ -66,9 +62,7 @@ namespace sql
         {
             try
             {
-                SqlCommand cmd;
                 SqlDataAdapter adapter = new SqlDataAdapter();
-                cmd = new SqlCommand(query, cnn);
                 adapter.DeleteCommand = new SqlCommand(query, cnn);
                 adapter.DeleteCommand.ExecuteNonQuery();
                 return true;
